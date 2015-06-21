@@ -105,6 +105,7 @@
  
  " Put new split window to the left of the current 
   set splitbelow
+
  " Set incremental search
   set incsearch
 
@@ -124,6 +125,10 @@
    "After remap: ` moves to the exact location of the mark 
   nnoremap ' `
   nnoremap ` '
+
+  " Tab navigation made easier
+  noremap <S-h> gT
+  noremap <S-l> gt
 
  " Mappings to improve switching between splits
   nnoremap <C-J> <C-W><C-J> "Ctrl-j to move down a split
