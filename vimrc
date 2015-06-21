@@ -105,7 +105,13 @@
  
  " Put new split window to the left of the current 
   set splitbelow
+ " Set incremental search
+  set incsearch
+
  "======================= }}}
+ 
+ " Load skeleton codes
+  autocmd bufnewfile *.cpp 0r /home/yokai/Templates/cpp.cpp 
  
  "{{{ MAPPINGS ======================= 
  
@@ -131,7 +137,10 @@
  " Add a newline 
   nmap <leader>o o<Esc><cr>
 
+ " Toggle highlighted search
+  noremap <leader>h :set hlsearch! hlsearch?<CR> 
+
  " Laravel Mappings
-  nmap <leader>lr :e app/routes.php<cr>
+  nmap <leader>lr :e app/routes.php<CR>
 
  "======================= }}}
