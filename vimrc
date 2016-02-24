@@ -31,6 +31,12 @@
  " Full path fuzzy file, buffer, mru, tag ... finder
   Plugin 'kien/ctrlp.vim'
 
+ " Quoting/parenthesizing made simple
+  Plugin 'tpope/vim-surround'
+
+ " A code-completion engine for Vim
+  Plugin 'Valloric/YouCompleteMe'
+
  " All of your Plugins must be added before the following line
   call vundle#end()            " required
 
@@ -62,6 +68,7 @@
  " Set encoding to utf-8 (defualt is latin1)
   scriptencoding utf-8
 
+
  "======================= }}}
  
  "{{{ APPEARANCE ======================= 
@@ -75,8 +82,7 @@
  " Switch syntax highlighting on
   syntax on
   syntax enable 
-
- " 
+    
 
  "======================= }}}
  
@@ -113,12 +119,14 @@
  
  " Load skeleton codes
   autocmd bufnewfile *.cpp 0r /home/yokai/Templates/cpp.cpp 
+  autocmd bufnewfile *.html 0r /home/yokai/Templates/html.html
  
  "{{{ MAPPINGS ======================= 
  
  
  " Mapping the escape key
   inoremap jk <Esc>
+  inoremap JK <Esc>
 
  " Remap ` to ' 
    "By default: ' moves to the beginning of the line containing a mark
@@ -146,6 +154,6 @@
   noremap <leader>h :set hlsearch! hlsearch?<CR> 
 
  " Laravel Mappings
-  nmap <leader>lr :e app/routes.php<CR>
+  nmap <leader>lr :tabe app/Http/routes.php<CR>
 
  "======================= }}}
