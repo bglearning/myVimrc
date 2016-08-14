@@ -37,6 +37,9 @@
  " A code-completion engine for Vim
   Plugin 'Valloric/YouCompleteMe'
 
+ " Typescript syntax files for Vim
+  Plugin 'leafgarland/typescript-vim'
+
  " All of your Plugins must be added before the following line
   call vundle#end()            " required
 
@@ -152,6 +155,9 @@
 
  " Toggle highlighted search
   noremap <leader>h :set hlsearch! hlsearch?<CR> 
+
+ " Toggle ruler at 80th character
+  nnoremap <leader>c :set colorcolumn=<C-R>=&colorcolumn != 0 ? 0 : 81<CR><CR> 
 
  " Laravel Mappings
   nmap <leader>lr :tabe app/Http/routes.php<CR>
